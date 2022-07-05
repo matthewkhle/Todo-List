@@ -8,9 +8,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  // save data
   final List<String> todoList = <String>[];
-  // text field
   final TextEditingController _textFieldController = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -28,14 +26,14 @@ class _HomeState extends State<Home> {
             ),
         ],
       ),
-      // add items to the to-do list
       floatingActionButton: FloatingActionButton(
-          onPressed: () => Future.delayed(
-                Duration.zero,
-                () => displayDialog(context),
-              ),
-          tooltip: 'Add Item',
-          child: const Icon(Icons.add)),
+        onPressed: () => Future.delayed(
+          Duration.zero,
+          () => displayDialog(context),
+        ),
+        tooltip: 'Add Item',
+        child: const Icon(Icons.add),
+      ),
     );
   }
 
@@ -51,7 +49,6 @@ class _HomeState extends State<Home> {
                   hintText: 'Enter Task Name (e.g. do laundry)'),
             ),
             actions: <Widget>[
-              // add button
               ElevatedButton(
                 child: const Text('ADD'),
                 onPressed: () {
@@ -62,7 +59,6 @@ class _HomeState extends State<Home> {
                   });
                 },
               ),
-              // Cancel button
               ElevatedButton(
                 child: const Text('CANCEL'),
                 onPressed: () {

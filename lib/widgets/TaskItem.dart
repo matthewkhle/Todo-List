@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:todo_list/src/home.dart';
+import 'package:todo_list/home.dart';
 
 class TaskItem extends StatelessWidget {
-  TaskItem({
-    required this.task,
-    required this.isChecked
-  }) : super(key: ObjectKey(task));
-
+  TaskItem({required this.task, required this.isChecked})
+      : super(key: ObjectKey(task));
 
   final Task task;
   final isChecked;
